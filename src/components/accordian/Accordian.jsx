@@ -2,46 +2,62 @@ import { useState } from 'react';
 import './Accordian.css';
 
 const Accordian = () => {
-    // const [selected, setSelected] = useState(null); // single selection
-    const [selected, setSelected] = useState([]); // multiple selection
+    const [multiSelectIsOn, setMultiSelectIsOn] = useState(false);
+    const [selected, setSelected] = useState(null); // single selection
+    const [multipleSelected, setMultipleSelected] = useState([]); // multiple selection
 
-    const handleSelection = (id) => {
-    //   setSelected(selected != id ? id : null);   // for single selection
-
-    const temp = [...selected];
-    const isPresent = temp.includes(id);
-    if (isPresent) {
-        const idx = temp.indexOf(id);
-        temp.splice(idx, 1);
-        setSelected(temp);
-    } else {
-        temp.push(id);
-        setSelected(temp);
+    const handleSingleSelection = (id) => {
+      setSelected(selected != id ? id : null);   // for single selection
     }
+
+    const handleMultipleSelection = (id) => { 
+      const temp = [...multipleSelected];
+      const isPresent = temp.includes(id);
+      if (isPresent) {
+          const idx = temp.indexOf(id);
+          temp.splice(idx, 1);
+          setMultipleSelected(temp);
+      } else {
+          temp.push(id);
+          setMultipleSelected(temp);
+      }
     };
     return (
       <div className="wrapper">
-        <h1>Single & Multiselect Accordian</h1>
+        <h1>Single & Multi select Accordian</h1>
         <div className="accordian">
           {data && data.length > 0 ? (
             data.map((item) => (
               <div
                 className="item"
                 key={item.id}
-                onClick={() => handleSelection(item.id)}
+                onClick={() => multiSelectIsOn ? 
+                  handleMultipleSelection(item.id) : 
+                  handleSingleSelection(item.id)
+                }
               >
                 <div className="title">
                   <h3>{item.question}</h3>
                   <span>+</span>
                 </div>
-                {selected.includes(item.id) ? (
-                  <div className="content">{item.answer}</div>
-                ) : null}
+                {multiSelectIsOn
+                  ? multipleSelected.includes(item.id) && (
+                      <div className="content">{item.answer}</div>
+                    )
+                  : selected === item.id && (
+                      <div className="content">{item.answer}</div>
+                    )}
               </div>
             ))
           ) : (
             <div>No data found</div>
           )}
+        </div>
+        <div className="mode">
+          <h3>{multiSelectIsOn ? "Multi select is on" : "Single select is on"}</h3>
+          <button onClick={() => setMultiSelectIsOn(!multiSelectIsOn)}>
+            Toggle Selection
+          </button>
         </div>
       </div>
     );

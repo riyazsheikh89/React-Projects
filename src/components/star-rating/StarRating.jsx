@@ -34,6 +34,7 @@ const StarRating = ({ totalStars = 5 }) => {
           })
         }
         </div>
+        <h3>Hover or click on stars</h3>
       </div>
     );
 }

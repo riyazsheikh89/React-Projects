@@ -1,7 +1,7 @@
 .wrapper {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -26,4 +26,24 @@
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
+}
+
+.mode {
+    padding: 5px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: rgb(33, 158, 29);
+}
+.mode button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background-color: #00367d;
+    cursor: pointer;
+}
+
+.mode button:hover {
+    background-color: #175ebc;
 }
