@@ -3,6 +3,7 @@ import Accordian from './components/accordian/Accordian';
 import ColorGenerator from './components/random-color-generator/ColorGenerator';
 import StarRating from './components/star-rating/StarRating';
 import ImageSlider from './components/image-slider/ImageSlider';
+import LoadData from './components/load-more-data/LoadData';
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <ColorGenerator />
       <StarRating totalStars={5} />
       <ImageSlider url={'https://picsum.photos/v2/list'} />
+      <LoadData />
     </div>
   )
 }
