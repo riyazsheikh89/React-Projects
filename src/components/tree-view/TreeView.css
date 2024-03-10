@@ -1,0 +1,26 @@
+.tree-view-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-list-container {
+    width: 25%;
+    background: #0052FE;
+    color: white;
+    list-style: none;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.menu-item-container {
+    max-width: 100%;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
