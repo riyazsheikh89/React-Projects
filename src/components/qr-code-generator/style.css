@@ -1,0 +1,32 @@
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: #ADD6E9;
+    height: 100vh;
+    width: 100%;
+}
+
+.qr-code {
+    height: 250px; 
+    width: 250px;
+}
+
+input{
+    border-radius: 6px;
+    padding: 7px;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #000000;
+    font-weight: 500;
+}
+
+button {
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}

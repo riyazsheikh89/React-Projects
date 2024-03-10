@@ -6,7 +6,8 @@ import ColorGenerator from './components/random-color-generator/ColorGenerator';
 import StarRating from './components/star-rating/StarRating';
 import ImageSlider from './components/image-slider/ImageSlider';
 import TreeView from './components/tree-view/TreeView';
-import LoadData from './components/load-more-data/LoadData';
+// import LoadData from './components/load-more-data/LoadData';
+import QrcodeGenerator from './components/qr-code-generator/QrcodeGenerator';
 
 function App() {
 
@@ -16,8 +17,9 @@ function App() {
       <ColorGenerator />
       <StarRating totalStars={5} />
       <ImageSlider url={'https://picsum.photos/v2/list'} />
-      <LoadData />
+      {/* <LoadData /> */}
       <TreeView menus={menus} />
+      <QrcodeGenerator />
     </div>
   )
 }
