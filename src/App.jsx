@@ -8,6 +8,7 @@ import ImageSlider from './components/image-slider/ImageSlider';
 import TreeView from './components/tree-view/TreeView';
 // import LoadData from './components/load-more-data/LoadData';
 import QrcodeGenerator from './components/qr-code-generator/QrcodeGenerator';
+import ThemeChanger from './components/dark-light-mode/ThemeChanger';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       {/* <LoadData /> */}
       <TreeView menus={menus} />
       <QrcodeGenerator />
+      <ThemeChanger />
     </div>
   )
 }

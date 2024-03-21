@@ -35,7 +35,6 @@ const ImageSlider = ({ url }) => {
             fetchImages(url);
         }
     }, [url]);
-    console.log(images);
 
     if (loading) {
         return <div>Loading...</div>

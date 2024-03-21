@@ -22,7 +22,7 @@ input{
     font-weight: 500;
 }
 
-button {
+.qr-code-container button {
     border: 1px solid black;
     padding: 8px;
     border-radius: 8px;
