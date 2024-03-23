@@ -9,6 +9,7 @@ import TreeView from './components/tree-view/TreeView';
 // import LoadData from './components/load-more-data/LoadData';
 import QrcodeGenerator from './components/qr-code-generator/QrcodeGenerator';
 import ThemeChanger from './components/dark-light-mode/ThemeChanger';
+import ProfileFinder from './components/github-profile-finder/ProfileFinder';
 // import ScrollBar from './components/scroll-bar/ScrollBar';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <QrcodeGenerator />
       <ThemeChanger />
       {/* <ScrollBar url={"https://dummyjson.com/products?limit=50"} /> */}
+      <ProfileFinder />
     </div>
   )
 }
