@@ -1,0 +1,38 @@
+.scroll-indicator-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    background-color: #076ef4;
+    color: #fff;
+}
+
+.scroll-bar-container {
+    width: 100%;
+    height: 10px;
+    background: yellow;
+}
+
+.scroll-bar {
+    height: 10px;
+    background: #000;
+    width: 0%;
+}
+
+.data-container {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

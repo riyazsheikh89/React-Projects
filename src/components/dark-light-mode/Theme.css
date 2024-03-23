@@ -16,6 +16,7 @@
 }
 
 #toggle-button {
+    cursor: pointer;
     padding: 10px;
     border-radius: 7px;
     font-size: medium;
